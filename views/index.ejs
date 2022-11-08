@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs') %>
+
+
+<section class="main-section mt-5 p-5">
+<div class="container-fluid">
+    <div class="table table-responsive"> 
+        <table cellpadding="10" cellspacing="10"  width="100%">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Last</th>
+                <th>Buy / Sell Price</th>
+                <th>Volume</th>
+                <th>base_unit</th>
+            </tr>
+            <% var i = 1 %>
+            <% data.forEach((item)=>{ %>
+                <tr>
+                    <td><%= i++ %></td>
+                    <td> <%= item.name %></td>
+                    <td><%= item.last %></td>
+                    <td><%= item.sale %>/<%= item.buy %></td>
+                    <td><%= item.volume %></td>
+                    <td><%= item.base_unit %></td>
+
+                </tr>
+                <% }) %>
+
+
+            <!-- <tr> -->
+                <!-- <td>1</td> -->
+                <!-- <td>BTC/INR</td> -->
+                <!-- <td>$121,00</td> -->
+                <!-- <td>$25000 / $30000</td> -->
+                <!-- <td>10000</td> -->
+                <!-- <td>BTC</td> -->
+            <!-- </tr> -->
+        </table>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<%- include('./partials/footer.ejs') %>
